@@ -14,14 +14,22 @@ public class FahrenheitCelsius{
       *
       *  @param args ...
       */
-     public static void main(String[] args){
-       try{
-       
+          public static void main(String[] args){
+         int fahrenheit =0;
+         float celsius = 0;
+         
+         for(int i=0; i<args.length; i++)
+         {
+            try{
+                fahrenheit =java.lang.Integer.parseInt(args[i]);
+                celsius=fahrenheitEnCelsius(fahrenheit);
+                System.out.println(fahrenheit + "\u00B0F -> " +
+                ((int)(celsius*10)/10.0) + "\u00B0C");
       
-       }catch(NumberFormatException nfe){
-           System.out.println("error : " + nfe.getMessage());  // en cas d'erreur 
-       }
-       
+            }catch(NumberFormatException nfe){
+                System.out.println("error : " + nfe.getMessage());  // en cas d'erreur 
+            }
+         }
      }
      
      /** 
